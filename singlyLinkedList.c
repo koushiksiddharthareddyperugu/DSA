@@ -8,7 +8,6 @@ struct Node {
 
 struct Node* head = NULL;
 
-// Insert at beginning
 void insertBegin(int value) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
     newNode->data = value;
@@ -16,8 +15,6 @@ void insertBegin(int value) {
     head = newNode;
     printf("Inserted %d at beginning\n", value);
 }
-
-// Insert at end
 void insertEnd(int value) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
     newNode->data = value;
@@ -35,7 +32,6 @@ void insertEnd(int value) {
     printf("Inserted %d at end\n", value);
 }
 
-// Delete from beginning
 void deleteBegin() {
     if (head == NULL) {
         printf("List is empty!\n");
@@ -47,7 +43,6 @@ void deleteBegin() {
     free(temp);
 }
 
-// Delete from end
 void deleteEnd() {
     if (head == NULL) {
         printf("List is empty!\n");
@@ -73,7 +68,6 @@ void deleteEnd() {
     prev->next = NULL;
 }
 
-// Display the list
 void display() {
     if (head == NULL) {
         printf("List is empty!\n");
@@ -88,7 +82,6 @@ void display() {
     printf("NULL\n");
 }
 
-// Main menu
 int main() {
     int choice, value;
 
@@ -137,3 +130,4 @@ int main() {
     }
     return 0;
 }
+
